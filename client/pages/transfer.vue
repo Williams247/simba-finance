@@ -146,12 +146,17 @@ export default {
       }
     },
     async handleSendMoney() {
+      const sendingAmount = this.$refs.amount.value;
+      if (!sendingAmount) {
+        this.$toast.error("Enter an amount to send");
+        return false;
+      }
       this.transferLoading = true;
       try {
         const response = await this.$axios.$post("/customer/send-money", {
           ...this.transferDetails,
           email: this.confirmation.email,
-          amount: this.$refs.amount.value
+          amount: sendingAmount
         });
         this.transferLoading = false;
         this.$toast.success(response.message);
