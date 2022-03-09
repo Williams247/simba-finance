@@ -1,0 +1,18 @@
+[
+    {
+        "label":"Home",
+        "url":"/"
+    },
+    {
+        "label":"Fund Account",
+        "url":"/fund-account"
+    },
+    {
+        "label":"Transfer",
+        "url":"/transfer"
+    },
+    {
+        "label":"Profile",
+        "url":"/profile"
+    }
+]
